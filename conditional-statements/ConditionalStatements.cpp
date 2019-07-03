@@ -2,7 +2,9 @@
 
 using namespace std;
 
-
+string number_names[] = {
+    "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"
+};
 
 int main()
 {
@@ -10,7 +12,11 @@ int main()
     cin >> n;
     cin.ignore(numeric_limits<streamsize>::max(), '\n');
 
-    // Write Your Code Here
+    if (n <= 9) {
+        cout << number_names[n - 1];
+    } else {
+        cout << "Greater than 9";
+    }
 
     return 0;
 }
