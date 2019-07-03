@@ -1,7 +1,12 @@
 #include <stdio.h>
 
 void update(int *a,int *b) {
-
+    int helper = *a;
+    *a = *a + *b;
+    *b = (helper - *b);
+    if (*b < 0) {
+        *b = *b * (-1);
+    }
 }
 
 int main() {
