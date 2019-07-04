@@ -4,7 +4,15 @@
 using namespace std;
 
 vector<int> parseInts(string str) {
-	
+	stringstream stream(str);
+    char ch;
+    vector<int> result;
+    do {
+        int number;
+        stream >> number;
+        result.push_back(number);
+    } while (stream >> ch);
+    return result;
 }
 
 int main() {
