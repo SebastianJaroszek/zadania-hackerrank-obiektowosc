@@ -4,7 +4,22 @@
 #include <exception>
 using namespace std;
 
-/* Define the exception here */
+class BadLengthException {
+    private:
+        int length;
+    public:
+        BadLengthException(int length);
+        string what();
+};
+
+BadLengthException::BadLengthException(int length) {
+    this->length = length;
+}
+string BadLengthException::what() {
+    stringstream msg;
+    msg << length;
+    return msg.str();
+}
 
 
 bool checkUsername(string username) {
