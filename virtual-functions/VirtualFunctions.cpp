@@ -10,8 +10,6 @@ class Person {
     public:
         string name;
         int age;
-    
-    public:
         virtual void getdata();
         virtual void putdata();
 };
