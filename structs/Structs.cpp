@@ -9,6 +9,13 @@ using namespace std;
     add code for struct here.
 */
 
+struct Student {
+    int age;
+    string first_name;
+    string last_name;
+    int standard;
+};
+
 int main() {
     Student st;
     
