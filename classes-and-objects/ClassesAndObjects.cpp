@@ -6,6 +6,32 @@
 #include <cassert>
 using namespace std;
 
+class Student {
+    private:
+        vector<int> scores;
+    
+    public:
+        void input();
+        int calculateTotalScore();
+};
+
+void Student::input() {
+    for (int i = 0; i < 5; i++) {
+        int grade;
+        cin >> grade;
+        scores.push_back(grade);
+    }
+}
+
+int Student::calculateTotalScore() {
+    int result = 0;
+    for (int i = 0; i < scores.size(); i++) {
+        result = result + scores[i];
+    }
+    return result;
+}
+
+
 int main() {
     int n; // number of students
     cin >> n;
